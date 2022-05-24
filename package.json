@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "description": "projeto integrador senac 2022",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
