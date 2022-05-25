@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/home/src/consulta_cliente.js" defer></script>
+    <script src="/home/src/deleta_cliente.js" defer></script>
+    <script src="/home/src/todos_clientes.js" defer></script>
     <title>Página de Consulta</title>
 
     <!--CSS-->
@@ -27,8 +30,15 @@
                 <li><a href="/"><i class="fas fa-home"></i>
                         Página inicial</a></li>
                 <li>
-                    <a href="/form">Cadastrar cliente</a>
+                    <a href="/form">Cadastrar Cliente</a>
                 </li>
+                <li>
+                    <a onclick="todos_clientes()" style="cursor: pointer">Todos os Cliente</a>
+                </li>
+                <li>
+                    <a onclick="deleta_cliente()" style="cursor: pointer">Deletar Cliente</a>
+                </li>
+                
             </ul>
             <div class="social_media">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -45,19 +55,15 @@
             <!--BARRA DE PESQUISA-->
 
             <div class="search-box">
-                <input class="search-txt" type="text" name="" placeholder="Consulta de cliente cadastrado">
-                <a class="search-btn" href="#">
+                <input class="search-txt" type="text" placeholder="Consulta de cliente cadastrado" id="cpf_cnpj">
+                <button class="search-btn" onclick="consulta_cliente()">
                     <i class="fas fa-search"></i>
-                </a>
+                </button>
             </div>
 
             <!--CONTEÚDO DA PESQUISA-->
 
-            <div class="info">
-
-                <div>ONDE FICARÃO AS CONSULTAS FEITAS</div>
-                <div>ITEM 2</div>
-
+            <div class="info" id="query_content">  
             </div>
         </div>
     </div>
