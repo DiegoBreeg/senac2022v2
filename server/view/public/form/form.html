@@ -6,17 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Formulário de Cadastro</title>
-    <script>
-        function formatar(mascara, documento){
-            var i = documento.value.length;
-            var saida = mascara.substring(0,1);
-            var texto = mascara.substring(i)
-
-            if (texto.substring(0,1) != saida){
-                documento.value += texto.substring(0,1);
-            }
-        }
-    </script>
+    <script src="/form/src/cria_cliente.js" defer></script>
+    
 
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script> -->
@@ -28,7 +19,7 @@
             <img src="assets/img/undraw_Ideas_re_7twj.png" alt="">
         </div>
         <div class="formulario">
-            <form action="#">
+            <form>
                 <div class="form-header">
                     <div class="titulo">
                         <h1>Cadastro de Clientes</h1>
@@ -56,7 +47,7 @@
 
                     <div class="input-box">
                         <label for="cpf">CPF ou CNPJ</label>
-                        <input id="cpf" type="text" name="cpf" placeholder="Digite o CPF ou CNPJ" required>
+                        <input id="cpf_cnpj" type="text" name="cpf" placeholder="Digite o CPF ou CNPJ" required>
                     </div>                    
                     
                     <div class="input-box">
@@ -81,32 +72,32 @@
                     </div>
                     <div class="tributacao">
                         <div class="tributacaoentrada">
-                            <input type="radio" id="lucroreal" name="radio">
+                            <input type="radio" id="lucro_real" name="radio" value="true">
                             <label for="lucroreal">Lucro Real</label>
                         </div>                        
 
                         <div class="tributacaoentrada">
-                            <input type="radio" id="lucropresumido" name="radio">
+                            <input type="radio" id="lucro_presumido" name="radio" value="true">
                             <label for="lucropresumido">Lucro Presumido</label>
                         </div>
 
                         <div class="tributacaoentrada">
-                            <input type="radio" id="simples" name="radio">
+                            <input type="radio" id="simples_nacional" name="radio" value="true">
                             <label for="simples">Simples Nacional</label>
                         </div>
 
                         <div class="tributacaoentrada">
-                            <input type="radio" id="mei" name="radio">
+                            <input type="radio" id="mei" name="radio" value="true">
                             <label for="mei">MEI</label>
                         </div>
 
                     </div>
                 </div>
                 <div class="continue-button">
-                    <button><a href="#"></a>Cadastrar</button>
+                    <button onclick="cria_cliente()">Cadastrar</button>              
                 </div>
             </form>
-
+            
         </div>        
 
     </div>
